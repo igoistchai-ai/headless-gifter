@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Headless Horseman</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <meta property="og:title" content="Headless Horseman">
+  <meta property="og:image" content="assets/og.jpg">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a href="index.html" class="sidebar-brand" style="border:0;padding:0">
+      <img src="assets/logo.svg" alt="" width="22" height="22"> ROBLOX
+    </a>
+    <span style="margin-left:auto;display:flex;align-items:center;gap:5px;font-weight:600;font-size:13px">
+      <svg width="14" height="14" viewBox="0 0 16 16" class="robux" aria-hidden="true"><path fill="currentColor" d="M4.1 1.6h5.2L14.4 6.7v5.2L11.9 14.4H6.7L1.6 9.3V4.1L4.1 1.6zm1.2 2.2L3.8 5.3v5.4l1.5 1.5h5.4l1.5-1.5V5.3L10.7 3.8H5.3z"/></svg>
+      <span id="topBal">0</span>
+    </span>
+  </header>
+
+  <main class="page">
+    <div class="product-row">
+      <div class="preview-card">
+        <div class="preview-stage">
+          <div class="preview-turntable is-spinning" id="turn">
+            <img class="preview-figure" id="fig" src="assets/headless-horseman.png" alt="Headless Horseman" draggable="false">
+          </div>
+        </div>
+        <span class="preview-note">3D</span>
+      </div>
+
+      <div class="product-info">
+        <h1>Headless Horseman</h1>
+        <div class="creator-row"><span class="by">By</span> Roblox</div>
+        <div class="price-row">
+          <span class="label">Price</span>
+          <span class="amount">
+            <svg width="16" height="16" viewBox="0 0 16 16" class="robux" aria-hidden="true"><path fill="currentColor" d="M4.1 1.6h5.2L14.4 6.7v5.2L11.9 14.4H6.7L1.6 9.3V4.1L4.1 1.6zm1.2 2.2L3.8 5.3v5.4l1.5 1.5h5.4l1.5-1.5V5.3L10.7 3.8H5.3z"/></svg>
+            31,000
+          </span>
+        </div>
+        <button class="cta cta-buy" type="button" id="buyBtn">Buy</button>
+        <button class="cta cta-gift" type="button" id="giftBtn">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="11" width="16" height="9" rx="1"/><path d="M4 11h16V8H4zM12 8v12"/><path d="M12 8c-2.2 0-4-1.2-4-2.6S10.2 4 12 8c1.8-4 4-2.8 4 .4S14.2 8 12 8z"/></svg>
+          Gift
+        </button>
+
+        <dl class="meta-list">
+          <div class="meta-row"><dt>Tradable</dt><dd>No</dd></div>
+          <div class="meta-row"><dt>Type</dt><dd>Characters</dd></div>
+          <div class="meta-row"><dt>Placement</dt><dd>Full Body</dd></div>
+          <div class="meta-row"><dt>Created</dt><dd>Aug 15, 2018</dd></div>
+          <div class="meta-row desc"><dt>Description</dt><dd>No, you must believe me. It was a horseman, a dead one. Headless.</dd></div>
+        </dl>
+      </div>
+    </div>
+
+    <section class="included">
+      <h2>Included Items</h2>
+      <div class="included-row">
+        <a class="item-card" href="#"><div class="item-thumb"><img src="assets/left-arm.png" alt=""></div><div class="name">Headless Horseman Left Arm</div><div class="kind">Left Arm</div></a>
+        <a class="item-card" href="#"><div class="item-thumb"><img src="assets/right-arm.png" alt=""></div><div class="name">Headless Horseman Right Arm</div><div class="kind">Right Arm</div></a>
+        <a class="item-card" href="#"><div class="item-thumb"><img src="assets/left-leg.png" alt=""></div><div class="name">Headless Horseman Left Leg</div><div class="kind">Left Leg</div></a>
+        <a class="item-card" href="#"><div class="item-thumb"><img src="assets/right-leg.png" alt=""></div><div class="name">Headless Horseman Right Leg</div><div class="kind">Right Leg</div></a>
+        <a class="item-card" href="#"><div class="item-thumb"><img src="assets/torso.png" alt=""></div><div class="name">Headless Horseman Torso</div><div class="kind">Torso</div></a>
+        <a class="item-card" href="#"><div class="item-thumb"><img src="assets/new-head.png" alt=""></div><div class="name">Headless Horseman's Off Sale Gear</div><div class="kind">Head</div></a>
+        <a class="item-card" href="#"><div class="item-thumb"><img src="assets/headless-head.png" alt=""></div><div class="name">Headless Head</div><div class="kind">Dynamic Head</div></a>
+        <a class="item-card" href="#"><div class="item-thumb"><img src="assets/anime-mood.png" alt=""></div><div class="name">Anime - Mood</div><div class="kind">Mood Animation</div></a>
+      </div>
+    </section>
+  </main>
+
+  <div class="overlay" id="overlay" aria-hidden="true"></div>
+  <div class="gift-modal" id="giftModal" role="dialog" aria-modal="true" aria-labelledby="gift-title"></div>
+  <div id="buyHost"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
